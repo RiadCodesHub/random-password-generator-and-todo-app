@@ -47,8 +47,8 @@ const Todo = () => {
   
   
     return (
-      <div className='w-full  flex justify-center items-center'>
-        <div className='max-w-md w-full p-4 rounded-lg flex flex-col bg-white '>
+      <div className='w-full h-screen  flex justify-center '>
+        <div className='max-w-md w-full h-fit p-4 rounded-lg flex flex-col bg-white '>
         <h1 className='w-full text-center mb-3 text-xl font-bold'>Todo</h1>
         <div className='flex gap-2 '>
           <input type="text" className='w-full h-40px bg-white px-2 text-sm py-2 rounded-lg outline-2' 
@@ -70,7 +70,7 @@ const Todo = () => {
                   >Compleated</button>
         </div>
   
-        <div className='w-full h-auto mt-4'>
+        <div className='w-full mt-4'>
           <ul className='w-full mt-3 flex flex-col gap-3 '>
             {filteredTasks.map((task) => {
               return (

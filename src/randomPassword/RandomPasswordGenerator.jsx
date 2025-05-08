@@ -62,7 +62,7 @@ useEffect(() => {
                    className='accent-blue-500'
                   id='trackRange'
                   onChange={e => setLength(e.target.value)} />
-            <label htmlFor="trackRange">{length}</label>
+            <label htmlFor="trackRange" className='text-xl font-bold'>{length}</label>
             </span>
             <span className='flex gap-2'>
               <input type="checkbox" 
