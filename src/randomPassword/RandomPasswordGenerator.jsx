@@ -40,7 +40,7 @@ useEffect(() => {
 
   return (
     <div className='w-full h-screen'>
-      <div className='max-w-full min-w-sm w-md mx-auto flex flex-col bg-white p-4 rounded-lg'>
+      <div className='max-w-full min-w-sm  w-md mx-auto flex flex-col bg-white p-4 rounded-lg'>
         <h2 className='text-2xl font-semibold text-center'>Random password genaretor</h2>
         {/*main body*/}
         <div className='w-full h-auto mt-5 flex flex-col'>

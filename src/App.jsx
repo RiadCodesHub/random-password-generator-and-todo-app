@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Todo from './Todo/Todo';
 import RandomPasswordGenerator from './randomPassword/RandomPasswordGenerator';
+import MiniContext from '../miniContext/MiniContext';
 
 const App = () => {
   const [backgroundImg, setBackgroundImg] = useState(
@@ -24,7 +25,7 @@ const App = () => {
   return (
     <Router>
       <div
-        className='w-full max-h-full h-auto max-w-[1500px] min-w-sm  mx-auto flex flex-col items-center pt-10'
+        className='w-full max-h-full h-screen max-w-[1500px] min-w-sm  mx-auto flex flex-col items-center pt-10'
         style={{ backgroundImage: backgroundImg, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <button 
@@ -37,11 +38,13 @@ const App = () => {
         <nav className="flex gap-4 mb-8 items-center">
           <Link to="/" className="px-4 py-2 bg-blue-600 hover:bg-blue-500  text-white rounded-lg">Todo App</Link>
           <Link to="/password" className="px-4 py-2 bg-green-600 hover:bg-green-500 text-white rounded-lg">Password Generator</Link>
+          <Link to="/context" className='bg-yellow-300 text-lg px-3 py-1 rounded-lg'>Context Api</Link>
         </nav>
 
         <Routes>
           <Route path='/' element={<Todo />} />
           <Route path='/password' element={<RandomPasswordGenerator />} />
+          <Route path='/context' element={<MiniContext />} />
         </Routes>
       </div>
     </Router>
